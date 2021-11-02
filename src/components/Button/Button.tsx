@@ -1,5 +1,5 @@
-import {Arrow} from '@components/Icons/Arrow';
-import {Email} from '@components/Icons/Email';
+import {Arrow} from '@components/Icons';
+import {Email} from '@components/Icons';
 import {styled} from '@stitchesConfig';
 import {motion, Variants} from 'framer-motion';
 import React from 'react';
