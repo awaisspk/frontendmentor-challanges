@@ -1,12 +1,20 @@
 {
   "compilerOptions": {
     "baseUrl": "./src",
-    "paths": {  
-      "@components/*" : ["components/*"],
-      "@stitchesConfig" : ["../styles/stitches.config.ts"]
- },
+    "paths": {
+      "@components/*": [
+        "components/*"
+      ],
+      "@stitchesConfig": [
+        "../styles/stitches.config.ts"
+      ]
+    },
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -17,8 +25,15 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

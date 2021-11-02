@@ -1,21 +1,28 @@
-import { globalCss } from "@stitchesConfig";
+import {globalCss} from '@stitchesConfig';
 
 export const globalStyles = globalCss({
   html: {
-    font: "100%/1.25 $fonts$primary",
+    font: '100%/1.25 $fonts$primary',
 
-    "@bp2": {
-      font: "112.5%/1.45 $fonts$primary",
+    '@bp2': {
+      font: '112.5%/1.45 $fonts$primary',
     },
+    boxSizing: 'border-box',
   },
 
-  "@font-face ": {
-    fontFamily: "Inter",
-    fontStyle: "normal",
-    fontWeight: "100 900",
-    fontDisplay: "swap",
+  '*, ::before, ::after': {
+    margin: 0,
+    padding: 0,
+    boxSizing: 'inherit',
+  },
+
+  '@font-face ': {
+    fontFamily: 'Inter',
+    fontStyle: 'normal',
+    fontWeight: '100 900',
+    fontDisplay: 'optional',
     src: 'url("/fonts/inter-var-latin.woff2") format("woff2")',
     unicodeRange:
-      "U+A,U+20,U+21,U+23,U+27,U+2C-3A,U+40-59,U+61-7A,U+A9,U+200D,U+2014,U+1F389,U+1F44B,U+1F468,U+1F4BB,U+1F4DD,U+1F92B",
+      'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,U+FEFF, U+FFFD',
   },
 });

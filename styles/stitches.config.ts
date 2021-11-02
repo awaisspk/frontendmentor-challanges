@@ -4,15 +4,14 @@ import type * as Stitches from '@stitches/react';
 const StitchesConfig = createStitches({
   theme: {
     colors: {
-      brand: 'hsl(26, 100%, 55%)',
-      body: 'White',
-      blue0: 'hsl(220, 13%, 13%)',
-      blue1: 'hsl(219, 9%, 45%)',
-      blue2: 'hsl(220, 14%, 75%)',
-      blue3: 'hsl(223, 64%, 98%)',
-      White: 'hsl(0, 0%, 100%)',
-      Black: 'hsla(0, 0%, 0%,0.75)',
-      Selection: 'hsla(26, 100%, 55%,0.1)',
+      brand: 'hsl(176, 68%, 64%)',
+      blue0: 'hsl(198, 60%, 50%)',
+      blue1: 'hsl(217, 28%, 15%)',
+      blue2: 'hsl(218, 28%, 13%)',
+      blue3: 'hsl(216, 53%, 9%)',
+      blue4: 'hsl(219, 30%, 18%)',
+      white: 'hsl(0, 0%, 100%)',
+      black: 'hsla(0, 0%, 0%,0.75)',
     },
     fonts: {
       primary: 'Inter',
