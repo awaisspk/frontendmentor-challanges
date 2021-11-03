@@ -53,4 +53,5 @@ const StyledHeader = styled('header', {
     verticalAlign: 'top',
   },
 });
+
 const Wrapper = styled('div', {});
