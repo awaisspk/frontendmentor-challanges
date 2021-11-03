@@ -14,6 +14,30 @@ export const globalStyles = globalCss({
     margin: 0,
     padding: 0,
     boxSizing: 'inherit',
+    WebkitTapHighlightColor: 'transparent',
+  },
+
+  a: {
+    textDecoration: 'none',
+  },
+  img: {
+    maxWidth: '100%',
+  },
+
+  body: {
+    width: '100%',
+    minHeight: '100vh',
+    background: ' url("/images/bg-curvy-mobile.svg") no-repeat 50% 47%',
+    backgroundColor: '$blue2',
+    backgroundSize: 'contain',
+    zIndex: '-1',
+
+    '@bp2': {
+      background: ' url("/images/bg-curvy-desktop.svg") no-repeat',
+      backgroundColor: '$blue1',
+      backgroundSize: 'contain',
+      backgroundPosition: '50% 70%',
+    },
   },
 
   '@font-face ': {
