@@ -6,28 +6,31 @@ import React from 'react';
 
 const StyledButton = styled(motion.button, {
   border: 'none',
-  backgroundColor: 'rgba(59,43,91,1)',
+  linearGradient: '$brand, $blue0',
   cursor: 'pointer',
-  padding: '$2 $6',
+  padding: '$3 $8',
   color: '$white',
   fontFamily: 'Inter',
   fontSize: '$1',
   fontWeight: '$500',
-  display: 'flex',
+  display: 'inline-flex',
   justifyContent: 'center',
   alignItems: 'center',
-  borderRadius: '$lg',
+  borderRadius: '$full',
   boxShadow: '0 20px 40px rgba(59,43,91,0.3)',
   userSelect: 'none',
   WebkitTapHighlightColor: 'transparent',
-  outline: 'none',
 
   '& svg': {
     marginRight: '0.5rem',
   },
 
-  '&:focus-visible': {
-    boxShadow: '0 20px 40px rgba(59,43,91,0.3), 0 0 0 3px rgba(59,43,91,0.7)',
+  '@supports selector(:focus-visible)': {
+    '&:focus-visible': {
+      outline: 'none',
+      boxShadow:
+        '0 20px 40px hsla(176, 68%, 64%,0.5) 0 0 0 3px  hsla(176, 68%, 64%,0.3)',
+    },
   },
 });
 
@@ -35,7 +38,10 @@ type ButtonProps = {
   icon?: 'arrow' | 'email';
 };
 
-export const Button: React.FC<ButtonProps> = ({icon, children}) => {
+type StyledButtonProps = React.ComponentProps<typeof StyledButton>;
+type Props = StyledButtonProps & ButtonProps;
+
+export const Button: React.FC<Props> = ({icon, children, ...rest}) => {
   const isIcon = icon !== undefined;
 
   const buttonVariants: Variants = {
@@ -58,6 +64,7 @@ export const Button: React.FC<ButtonProps> = ({icon, children}) => {
         initial="idle"
         whileHover="hover"
         whileTap="tap"
+        {...rest}
       >
         {icon === 'arrow' && <Arrow />}
         {icon === 'email' && <Email />}
